@@ -1,0 +1,66 @@
+[project]
+name = "must-test-client"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "pre-commit>=4.3.0",
+    "pyinstaller>=6.15.0",
+    "pyside6>=6.9.2",
+    "requests>=2.32.5",
+]
+
+[dependency-groups]
+dev = [
+    "pyside6>=6.9.2",
+    "pytest>=8.4.1",
+    "ruff>=0.12.11",
+]
+
+#ruff
+[tool.ruff]
+
+target-version = "py312"
+extend-exclude = ["migrations", "app/config/"]
+line-length = 79
+show-fixes = true
+
+[tool.ruff.lint]
+
+select = [
+    "UP",   # pyupgrade
+    "I",    # isort
+    "F",    # flake8-pyflakes
+    "S",    # flake8-bandit
+    "BLE",  # flake8-blind-except
+    "T20",  # flake8-print
+    "PT",   # flake8-pytest-style
+    "DTZ",  # flake8-datetimez
+]
+
+fixable = [
+    "I",
+    "F401",
+    "T20",
+]
+
+[tool.ruff.lint.extend-per-file-ignores]
+
+"tests/*.py" = ["S101", "DTZ005"]
+
+[tool.ruff.format]
+
+quote-style = "double"
+indent-style = "space"
+
+
+#pytest
+[tool.pytest.ini_options]
+
+addopts = "-v"
+console_output_style = "count"
+minversion = "6.0"
+pythonpath = ["app", "tests", "."]
+testpaths = "./tests"
+asyncio_mode = "auto"
+filterwarnings = ["ignore::PendingDeprecationWarning"]

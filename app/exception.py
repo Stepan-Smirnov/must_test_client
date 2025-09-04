@@ -1,0 +1,2 @@
+class BadAPIResponse(Exception):
+    pass

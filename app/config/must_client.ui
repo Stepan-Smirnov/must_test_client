@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>614</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Rubik</family>
+    <pointsize>20</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, 
+    stop:0 rgba(140, 140, 140, 255), 
+    stop:0.42 rgba(80, 0, 130, 235), 
+    stop:1 rgba(180, 120, 180, 255));
+
+font-family: Rubik;</string>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="leftMargin">
+       <number>30</number>
+      </property>
+      <property name="topMargin">
+       <number>15</number>
+      </property>
+      <property name="rightMargin">
+       <number>30</number>
+      </property>
+      <property name="bottomMargin">
+       <number>15</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>20</number>
+      </property>
+      <item row="2" column="0">
+       <widget class="QListView" name="list_data">
+        <property name="styleSheet">
+         <string notr="true">background: rgba(255, 255, 255, 50);
+border-radius: 20px;
+padding: 20px;
+color: white;
+font-size: 20px</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QWidget" name="add_data_frame" native="true">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: transparent;</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,1">
+         <property name="spacing">
+          <number>100</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLineEdit" name="add_data_text">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+background: rgba(255, 255, 255, 50);
+border-radius: 20px;
+padding: 0 10px;
+height: 50px;
+font-size:28px;
+color: white;
+}
+
+QLineEdit:focus {
+border: 2px solid rgba(78,87,84, 200)
+}
+
+QLineEdit:hover {
+border: 2px solid rgba(78,87,84, 200)
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="maxLength">
+            <number>32</number>
+           </property>
+           <property name="cursorPosition">
+            <number>0</number>
+           </property>
+           <property name="placeholderText">
+            <string>add your data</string>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="add_data_btn">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Кнопка добавления даты&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background: rgba(255, 255, 255, 50);
+border-radius: 20px;
+height: 50px;
+padding: 0 10px;
+font-size:30px;
+color: white;
+font-weight: bold;
+}
+
+
+QPushButton:hover{
+border: 2px solid rgba(78,87,84, 200)
+}
+
+QPushButton:pressed{
+background-color: rgba(78,87,84, 200)
+}
+
+
+</string>
+           </property>
+           <property name="text">
+            <string>Add Data</string>
+           </property>
+           <property name="icon">
+            <iconset resource="res_rc.qrc">
+             <normaloff>:/icons/icons/plus.svg</normaloff>:/icons/icons/plus.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QFrame" name="pagination_frame">
+        <property name="minimumSize">
+         <size>
+          <width>700</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: transparent;</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="2,4">
+         <property name="spacing">
+          <number>50</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QFrame" name="paginate_btn">
+           <property name="styleSheet">
+            <string notr="true">background: transparent;</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,1">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="prev_page_btn">
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+background: rgba(255, 255, 255, 50);
+border-radius: 20px;
+height: 50px;
+padding: 0 10px;
+font-size:20px;
+color: white;
+font-weight: bold;
+}
+
+
+QPushButton:hover{
+border: 2px solid rgba(78,87,84, 200)
+}
+
+QPushButton:pressed{
+background-color: rgba(78,87,84, 200)
+}
+</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="res_rc.qrc">
+                <normaloff>:/icons/icons/prev.svg</normaloff>:/icons/icons/prev.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="next_page_btn">
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+background: rgba(255, 255, 255, 50);
+border-radius: 20px;
+height: 50px;
+padding: 0 10px;
+font-size:20px;
+color: white;
+font-weight: bold;
+}
+
+
+QPushButton:hover{
+border: 2px solid rgba(78,87,84, 200)
+}
+
+QPushButton:pressed{
+background-color: rgba(78,87,84, 200)
+}
+</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="res_rc.qrc">
+                <normaloff>:/icons/icons/next.svg</normaloff>:/icons/icons/next.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="paginate_page">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: transparent;</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,1">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="curent_page">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="baseSize">
+               <size>
+                <width>0</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background: rgba(255, 255, 255, 50);
+border-radius: 20px;
+height: 50px;
+padding: 0 10px;
+font-size:20px;
+color: white;
+font-weight: bold;</string>
+              </property>
+              <property name="text">
+               <string>Current Page: 1</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="total_pages">
+              <property name="styleSheet">
+               <string notr="true">background: rgba(255, 255, 255, 50);
+border-radius: 20px;
+height: 50px;
+padding: 0 10px;
+font-size:20px;
+color: white;
+font-weight: bold;</string>
+              </property>
+              <property name="text">
+               <string>Total Pages: 10</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QWidget" name="get_data_frame" native="true">
+        <property name="styleSheet">
+         <string notr="true">background: rgba(255, 255, 255, 50);
+border-radius: 20px;</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,0,4">
+         <property name="spacing">
+          <number>30</number>
+         </property>
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <property name="topMargin">
+          <number>10</number>
+         </property>
+         <property name="rightMargin">
+          <number>10</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="get_data_btn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background: rgba(255, 255, 255, 50);
+border-radius: 20px;
+height: 50px;
+padding: 0 10px;
+font-size:30px;
+color: white;
+font-weight: bold;
+}
+
+
+QPushButton:hover{
+border: 2px solid rgba(78,87,84, 200)
+}
+
+QPushButton:pressed{
+background-color: rgba(78,87,84, 200)
+}</string>
+           </property>
+           <property name="text">
+            <string>Get Data</string>
+           </property>
+           <property name="icon">
+            <iconset resource="res_rc.qrc">
+             <normaloff>:/icons/icons/data.svg</normaloff>:/icons/icons/data.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="page_count">
+           <property name="styleSheet">
+            <string notr="true">QSpinBox {
+padding: 0 10px;
+border-radius: 7px;
+height: 50px;
+font-size:20px;
+color: white;
+}
+
+QSpinBox:hover{
+border: 2px solid rgba(78,87,84, 200)
+}</string>
+           </property>
+           <property name="suffix">
+            <string/>
+           </property>
+           <property name="prefix">
+            <string>on page: </string>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>10</number>
+           </property>
+           <property name="value">
+            <number>10</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="total_data">
+           <property name="styleSheet">
+            <string notr="true">
+background: rgba(255, 255, 255, 50);
+border-radius: 20px;
+height: 50px;
+padding: 0 10px;
+font-size:30px;
+color: white;
+font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>Total Data: 255</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="res_rc.qrc"/>
+ </resources>
+ <connections/>
+</ui>
