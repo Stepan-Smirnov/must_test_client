@@ -28,7 +28,7 @@ class ErrorWindow(QWidget):
         self.close()
 
 
-class MustClient(QMainWindow):
+class MainWindow(QMainWindow):
     """Main window class"""
 
     def __init__(self):
@@ -130,6 +130,6 @@ class MustClient(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = MustClient()
+    window = MainWindow()
     window.show()
     sys.exit(app.exec())

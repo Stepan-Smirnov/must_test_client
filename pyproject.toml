@@ -62,5 +62,4 @@ console_output_style = "count"
 minversion = "6.0"
 pythonpath = ["app", "tests", "."]
 testpaths = "./tests"
-asyncio_mode = "auto"
 filterwarnings = ["ignore::PendingDeprecationWarning"]
